@@ -13,11 +13,8 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 @st.cache_data
 def get_driver():
-    return webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+    return webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 
-options = Options()
-options.add_argument('--disable-gpu')
-options.add_argument('--headless')
 
 driver = get_driver()
 driver.get('https://drones.enaire.es/')
