@@ -11,7 +11,7 @@ import chromedriver_binary
 
 # Set up Chrome options
 chrome_options = Options()
-chrome_options.add_argument("--headless")  # Run Chrome in headless mode
+#chrome_options.add_argument("--headless")  # Run Chrome in headless mode
 
 # Create a new Chrome driver instance
 driver = webdriver.Chrome(options=chrome_options)
