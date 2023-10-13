@@ -10,12 +10,12 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service as ChromeService
 import pandas as pd
 
-chrome_options = webdriver.ChromeOptions()
+#chrome_options = webdriver.ChromeOptions()
 #chrome_options.add_argument('--headless')
-chrome_options.add_argument('--window-size=1920x1080')
-chrome_options.add_argument('--disable-gpu')
+#chrome_options.add_argument('--window-size=1920x1080')
+#chrome_options.add_argument('--disable-gpu')
 
-driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=chrome_options)
+driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
 
 url = 'https://drones.enaire.es/'
 driver.get(url)
