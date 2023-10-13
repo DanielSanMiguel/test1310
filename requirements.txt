@@ -1,2 +1,2 @@
 streamlit
-seleniumbase
+selenium==4.9.1
