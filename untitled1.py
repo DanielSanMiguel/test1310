@@ -13,7 +13,7 @@ b_1 = st.button('arranca')
 if b_1:
     driver = Driver(browser="chrome")
     
-    driver.get("https://drones.enaire.es/")
+    driver.open("https://drones.enaire.es/")
 
 
 b_2 = st.button('apàga')
