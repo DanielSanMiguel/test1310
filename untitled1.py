@@ -9,10 +9,11 @@ from seleniumbase import Driver
 from seleniumbase import BaseCase
 from selenium import webdriver
 
-
-driver = Driver(browser="chrome", headless=False)
-
-driver.get("https://drones.enaire.es/")
+b_1 = st.button('arranca')
+if b_1:
+    driver = Driver(browser="chrome", headless=False)
+    
+    driver.get("https://drones.enaire.es/")
 
 
 
