@@ -11,9 +11,11 @@ from selenium import webdriver
 
 b_1 = st.button('arranca')
 if b_1:
-    driver = Driver()
+    driver = Driver(browser="chrome")
     
-    driver.open("https://drones.enaire.es/")
+    driver.get("https://drones.enaire.es/")
 
 
-
+b_2 = st.button('apàga')
+if b_2:
+    driver.quit()
