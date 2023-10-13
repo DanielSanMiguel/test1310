@@ -18,8 +18,8 @@ with st.echo():
 
     @st.experimental_singleton
     def get_driver():
-        return webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
-
+        return webdriver.Chrome(executable_path=driver_path, options=options)
+    driver_path = ChromeDriverManager().install()
     options = Options()
     options.add_argument('--disable-gpu')
     options.add_argument('--headless')
