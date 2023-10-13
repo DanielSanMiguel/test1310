@@ -48,15 +48,7 @@ if __name__ == "__main__":
     st.set_page_config(page_title="Selenium Test", page_icon='✅',
         initial_sidebar_state='collapsed')
     st.title('🔨 Selenium Test for Streamlit Sharing')
-    st.markdown('''This app is only a very simple test for **Selenium** running on **Streamlit Sharing** runtime.<br>
-        The suggestion for this demo app came from a post on the Streamlit Community Forum.<br>
-        <https://discuss.streamlit.io/t/issue-with-selenium-on-a-streamlit-app/11563><br>
-        This is just a very very simple example and more a proof of concept.
-        A link is called and waited for the existence of a specific class and read it.
-        If there is no error message, the action was successful.
-        Afterwards the log file of chromium is read and displayed.
-        ---
-        ''', unsafe_allow_html=True)
+
 
     st.balloons()
     if st.button('Start Selenium run'):
