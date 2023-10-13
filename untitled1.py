@@ -11,7 +11,7 @@ from selenium import webdriver
 
 b_1 = st.button('arranca')
 if b_1:
-    driver = Driver(headless=False)
+    driver = Driver()
     
     driver.get("https://drones.enaire.es/")
 
