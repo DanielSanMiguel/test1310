@@ -6,16 +6,17 @@ Created on Fri Oct 13 13:34:43 2023
 """
 import streamlit as st
 from selenium import webdriver
-from webdriver_manager.chrome import ChromeDriverManager
-from selenium.webdriver.chrome.service import Service as ChromeService
-import pandas as pd
-import chromedriver_autoinstaller
-#chrome_options = webdriver.ChromeOptions()
-#chrome_options.add_argument('--headless')
-#chrome_options.add_argument('--window-size=1920x1080')
-#chrome_options.add_argument('--disable-gpu')
-chromedriver_autoinstaller.install()
-driver = webdriver.Chrome()
+from selenium.webdriver.chrome.options import Options
+import chromedriver_binary
 
-url = 'https://drones.enaire.es/'
-driver.get(url)
+# Set up Chrome options
+chrome_options = Options()
+chrome_options.add_argument("--headless")  # Run Chrome in headless mode
+
+# Create a new Chrome driver instance
+driver = webdriver.Chrome(options=chrome_options)
+
+# Use the driver to interact with web pages
+driver.get('https://drones.enaire.es/')
+
+
