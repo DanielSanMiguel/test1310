@@ -6,22 +6,17 @@ Created on Fri Oct 13 13:34:43 2023
 """
 import streamlit as st
 
+from seleniumbase import BaseCase
 from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.chrome.service import Service
-from webdriver_manager.chrome import ChromeDriverManager
 
-@st.cache_data
-def get_driver():
-    return webdriver.Chrome(service=Service(ChromeDriverManager().install()))
+class MyTest(BaseCase):
+    def test_open_browser(self):
+        self.driver = webdriver.Chrome()
+        self.driver.get("https://drones.enaire.es/")
 
 
-driver = get_driver()
-driver.get('https://drones.enaire.es/')
 
-st.code(driver.page_source)
-
-
-# Use the driver to interact with web pages
+if __name__ == "__main__":
+    MyTest().main()
 
 
