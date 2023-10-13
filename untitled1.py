@@ -8,11 +8,9 @@ import streamlit as st
 from seleniumbase import Driver
 from seleniumbase import BaseCase
 from selenium import webdriver
-
+driver = Driver(browser="chrome")
 b_1 = st.button('arranca')
 if b_1:
-    driver = Driver(browser="chrome")
-    
     driver.open("https://drones.enaire.es/")
 
 
