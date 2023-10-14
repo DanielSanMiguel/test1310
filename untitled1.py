@@ -25,6 +25,6 @@ with st.echo():
     options.add_argument('--headless')
 
     driver = get_driver()
-    driver.get("https://drones.enaire.es/")
+    driver.get('https://drones.enaire.es/')
 
     st.code(driver.page_source)
